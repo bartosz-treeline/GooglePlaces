@@ -12,8 +12,22 @@ let package = Package(
 
     ],
     targets: [
-        .binaryTarget(
+        .target(
             name: "GooglePlaces",
+            dependencies: [
+                .target(name: "GooglePlacesBinaryTarget"),
+            ],
+            linkerSettings: [
+                .linkedLibrary("libc++"),
+                .linkedLibrary("libz"),
+                .linkedFramework("CoreGraphics"),
+                .linkedFramework("CoreLocation"),
+                .linkedFramework("QuartzCore"),
+                .linkedFramework("UIKit"),
+           ]
+        ),
+        .binaryTarget(
+            name: "GooglePlacesBinaryTarget",
             path: "GooglePlaces-6.2.1-beta/GooglePlaces.xcframework"
         )
     ]
