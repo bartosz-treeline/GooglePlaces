@@ -29,7 +29,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "GooglePlaces",
-            path: "GooglePlaces-6.2.1-beta/GooglePlaces.xcframework"
+            url: "https://github.com/bartosz-treeline/GooglePlaces/releases/download/6.2.1/GooglePlaces.xcframework.zip",
+            checksum: "fca29bac3686cb267e5dadfc780471bc8f7295f659ec15af8772a7f741fda7e3"
         )
     ]
 )
