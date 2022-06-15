@@ -6,17 +6,18 @@ import PackageDescription
 let package = Package(
     name: "GooglePlaces",
     products: [
-        .library(name: "GooglePlaces", targets: ["GooglePlaces"]),
+        .library(name: "GooglePlaces", targets: ["GooglePlacesTarget"]),
     ],
     dependencies: [
 
     ],
     targets: [
         .target(
-            name: "GooglePlaces",
+            name: "GooglePlacesTarget",
             dependencies: [
-                .target(name: "GooglePlacesBinaryTarget"),
+                .target(name: "GooglePlaces"),
             ],
+            path: "Sources/GooglePlaces",
             linkerSettings: [
                 .linkedLibrary("libc++"),
                 .linkedLibrary("libz"),
@@ -27,7 +28,7 @@ let package = Package(
            ]
         ),
         .binaryTarget(
-            name: "GooglePlacesBinaryTarget",
+            name: "GooglePlaces",
             path: "GooglePlaces-6.2.1-beta/GooglePlaces.xcframework"
         )
     ]
