@@ -19,8 +19,8 @@ let package = Package(
             ],
             path: "Sources/GooglePlaces",
             linkerSettings: [
-                .linkedLibrary("libc++"),
-                .linkedLibrary("libz"),
+                .linkedLibrary("c++"),
+                .linkedLibrary("z"),
                 .linkedFramework("CoreGraphics"),
                 .linkedFramework("CoreLocation"),
                 .linkedFramework("QuartzCore"),
