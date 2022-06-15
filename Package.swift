@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "GooglePlaces",
     products: [
-        .library(name: "GooglePlaces", targets: ["GooglePlacesTarget"]),
+        .library(name: "GooglePlaces", type: .static, targets: ["GooglePlacesTarget"]),
     ],
     dependencies: [
 
