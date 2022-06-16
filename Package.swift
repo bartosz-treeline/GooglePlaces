@@ -6,27 +6,27 @@ import PackageDescription
 let package = Package(
     name: "GooglePlaces",
     products: [
-        .library(name: "GooglePlaces", targets: ["GooglePlacesTarget"]),
+        .library(name: "GooglePlaces", targets: ["GooglePlaces"]),
     ],
     dependencies: [
 
     ],
     targets: [
-        .target(
-            name: "GooglePlacesTarget",
-            dependencies: [
-                .target(name: "GooglePlaces"),
-            ],
-            path: "Sources/GooglePlaces",
-            linkerSettings: [
-                .linkedLibrary("c++"),
-                .linkedLibrary("z"),
-                .linkedFramework("CoreGraphics"),
-                .linkedFramework("CoreLocation"),
-                .linkedFramework("QuartzCore"),
-                .linkedFramework("UIKit"),
-           ]
-        ),
+//        .target(
+//            name: "GooglePlacesTarget",
+//            dependencies: [
+//                .target(name: "GooglePlaces"),
+//            ],
+//            path: "Sources/GooglePlaces",
+//            linkerSettings: [
+//                .linkedLibrary("c++"),
+//                .linkedLibrary("z"),
+//                .linkedFramework("CoreGraphics"),
+//                .linkedFramework("CoreLocation"),
+//                .linkedFramework("QuartzCore"),
+//                .linkedFramework("UIKit"),
+//           ]
+//        ),
         .binaryTarget(
             name: "GooglePlaces",
             url: "https://github.com/bartosz-treeline/GooglePlaces/releases/download/6.2.1/GooglePlaces.xcframework.zip",
