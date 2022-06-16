@@ -31,7 +31,7 @@ let package = Package(
         .binaryTarget(
             name: "GooglePlaces",
             url: "https://github.com/bartosz-treeline/GooglePlaces/releases/download/6.2.1/GooglePlaces.xcframework.zip",
-            checksum: "fca29bac3686cb267e5dadfc780471bc8f7295f659ec15af8772a7f741fda7e3"
+            checksum: "dccbb34ea2f7590bc5017da18197799b1e570444a1da727357d3c4e23c39bd56"
         )
     ]
 )
