@@ -6,19 +6,19 @@ import PackageDescription
 let package = Package(
     name: "GooglePlaces",
     products: [
-        .library(name: "GooglePlaces", type: .dynamic, targets: ["GooglePlacesTarget"]),
-        .library(name: "GooglePlacesStatic", type: .static, targets: ["GooglePlacesTarget"]),
+        .library(name: "GooglePlaces", type: .dynamic, targets: ["GooglePlacesWrapper"]),
+        .library(name: "GooglePlacesStatic", type: .static, targets: ["GooglePlacesWrapper"]),
     ],
     dependencies: [
 
     ],
     targets: [
         .target(
-            name: "GooglePlacesTarget",
+            name: "GooglePlacesWrapper",
             dependencies: [
                 .target(name: "GooglePlaces"),
             ],
-            path: "Sources/GooglePlaces",
+            path: "GooglePlacesWrapper",
             linkerSettings: [
                 .linkedLibrary("c++"),
                 .linkedLibrary("z"),
