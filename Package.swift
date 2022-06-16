@@ -6,11 +6,9 @@ import PackageDescription
 let package = Package(
     name: "GooglePlaces",
     products: [
-        .library(name: "GooglePlaces", type: .dynamic, targets: ["GooglePlacesWrapper"]),
-        .library(name: "GooglePlacesStatic", type: .static, targets: ["GooglePlacesWrapper"]),
+        .library(name: "GooglePlaces", targets: ["GooglePlacesWrapper"]),
     ],
     dependencies: [
-
     ],
     targets: [
         .target(
